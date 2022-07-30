@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Discout</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/3789c8a8d3.js" crossorigin="anonymous"></script>
+  <link href="https://gradiocss.xyz/styles/gradio.css" rel="stylesheet"/>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <!-- Discout Logo -->
+    <div class="left title">
+      <img src="logo.svg" height="50px">
+      <div class="desktop-only">Discout</div>
+    </div>
+    
+    <!-- Login Bar -->
+    <div class="right login">
+      <img src=<%= locals.avatar ?? "account.svg" %>>
+      <div class="dropdown" data-dropdown-menu>
+        <i class="fa-solid fa-caret-down fa-2xl dropbtn"></i>
+        <div class="dropdown-content">
+          <a href="/login">Login</a>
+          <a href="#">Submit a bot</a>
+          <a href="#">View Profile</a>
+        </div>
+    </div>
+      
+    </div>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="searchwrapper">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" id="search" placeholder="Search..." data-search="">
+  </div>
+  <!-- List-->
+  <div class="list" data-card-list></div>
+  <center>
+    <div data-not-found></div>
+  </center>
+  </div>
+
+	<div class="footer">
+		<div class="footer-brand">
+			<img height="25px" src="logo.svg">
+			<h4>Discout by Ultraviolet</h4>
+		</div>
+		<div class="footer-about">
+			<h4>About</h4>
+			<a href="https://arcus.quest/discord">Infrared Studio</a>
+		</div>
+		<div class="footer-more">
+			<h4>More</h4>
+			<a href="dashboard">Dashboard</a> <br><br>
+			<a href="submit">Submit A Bot</a> <br><br>
+			<a href="feedback">Feedback</a> <br><br>
+		</div>
+	</div>
+  <template data-card-template>
+    <div class="card fill">
+      <!-- bot info -->
+      <div class="info">
+          <h3 class="card-name" data-title></h3>
+          <div class="card-description" data-desc>An advanced, general purpose bot, aiming high</div>
+      </div>
+      <!-- controls -->
+      <div class="card-controls left">
+        <span data-vote onclick="vote()" class="fa-stack fa-lg" style="vertical-align: top;">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-arrow-up fa-stack-1x fa-inverse icon-gradient fa-beat"></i>
+       </span>
+      <a href data-link>
+        <span class="fa-stack fa-lg" style="vertical-align: top;">
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-link fa-stack-1x fa-inverse icon-gradient-blue fa-beat"></i>
+      </span>
+      </a>
+      </div>
+      <div class="gc-button-blue-purple right">View</div>
+    </div>
+  </template>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+body {
+  background: linear-gradient(0deg, #2C2F33, #6174EF 80%) fixed no-repeat;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+/*
+.navbar {
+  margin: 0;
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  vertical-align:middle;
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  margin:auto;
+}
+*/
+.navbar > img {
+  margin-right:10px;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.title {
+  font-size: 50px;
+  display:flex;
+  align-items:center;
+}
+.login > img {
+  border-radius: 100%;
+  width: 50px;
+  margin-right:5px;
+}
+.login {
+  display:flex;
+  align-items:center;
+}
+.list {
+  margin-top: 25px;
+  justify-content:center;
+}
+
+/* mobile only */
+@media screen and (max-width: 800px) {
+    .desktop-only {
+      display: none;
+    }
+  .list {
+    grid-template-columns: auto auto !important; 
+  }
+  /* Show the dropdown menu on hover */
+.dropdown-shown .dropdown-content {display: block; transition: 1s}
+}
+@media screen and (max-width:400px) {
+  .list {
+    grid-template-columns: auto !important;
+  }
+}
+/* Desktop-only */
+@media screen and (min-width:801px) {
+  .dropdown:hover .dropdown-content {display: block; transition: 1s}
+}
+.icon-gradient {
+    background: linear-gradient(45deg, #EFDC61, #EF6161);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.icon-gradient-blue {
+    background: linear-gradient(45deg, #90EE90, #6174EF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-circle {
+  color: #2C2F33;
+}
+input[type="search"] {
+  border: none;
+  color: white;
+  background-color:  #23272A;
+  padding: 10px;
+  border-radius: 100px;
+}
+.searchwrapper {
+  margin-top: 25px;
+  text-align: center;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.card {
+  border-radius: 40px;
+  background-color: #23272A;
+  padding: 25px;
+  margin: 10px;
+	transition:0.5s;
+}
+.card > img {
+  width: 100%;
+}
+.card:hover {
+	border:solid 3px #90EE90;
+  box-shadow: 0 0 25px 10px #90EE90;
+	transition:0.5s;
+}
+.fill {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+.hide {
+  display: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #23272A;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-color: white;
+  border-bottom: 1px;
+}
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #2C2F33;}
+
+.card-controls {
+  display:flex;
+  align-items:center;
+}
+
+.footer {
+  display: grid;
+	grid-template-columns: auto auto auto;
+  width: 100%;
+  color: white;
+	margin:25px;
+	margin-bottom:0;
+}
+.footer-brand {
+	float:left;
+}
+a {
+	text-decoration: none;
+	color:white;
+}
